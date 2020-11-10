@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start:dev": "rm -rf ./js && tsc && nodemon js/index.js",
+    "start:dev": "nodemon js/index.js",
+    "compile:watch": "rm -rf ./js && tsc -w",
+    "compile": "rm -rf ./js && tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Stephen Karl Jeoffrey Hisole",
@@ -19,6 +21,7 @@
     "nodemon": "^2.0.6"
   },
   "dependencies": {
+    "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
